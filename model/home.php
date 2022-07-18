@@ -1,26 +1,45 @@
 <?php
 class homeModel
 {
-
-    function home()
+    function __construct()
     {
-        $arr=array('title'=>'home','data'=>'home data');
-        return $arr;
+        include('connection.php');
+        $this->db=new db();
+        $this->conn=$this->db->getConnection();
+    }
+    function home()
+    {   $qry="SELECT * FROM data WHERE id='1'";
+        $result=mysqli_query($this->conn,$qry);
+        $num=mysqli_num_rows($result);
+        if($num>0)
+        {
+            $arr=mysqli_fetch_assoc($result);
+            return $arr;
+        }
     }
     function about()
     {
-        $arr=array('title'=>'about','data'=>'about data');
-        return $arr;
+        $qry="SELECT * FROM data WHERE id='2'";
+        $result=mysqli_query($this->conn,$qry);
+        $num=mysqli_num_rows($result);
+        if($num>0)
+        {
+            $arr=mysqli_fetch_assoc($result);
+            return $arr;
+        }
     }
 
     function contact()
     {
-        $arr=array('title'=>'contact','data'=>'contact data');
-        return $arr;
+        $qry="SELECT * FROM data WHERE id='3'";
+        $result=mysqli_query($this->conn,$qry);
+        $num=mysqli_num_rows($result);
+        if($num>0)
+        {
+            $arr=mysqli_fetch_assoc($result);
+            return $arr;
+        }
     }
-
-
-
 
 }
 

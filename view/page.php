@@ -28,7 +28,7 @@
     
      <h4>   
     <?php
-        echo $arr['data'];
+        echo $arr['description'];
     ?>
     </h4>
 

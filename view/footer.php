@@ -11,10 +11,11 @@
 </head>
 <body>
 <div class="card fixed-bottom">
-  <div class="card-header  bg-secondary" style="">
-    
+  <div class="card-header  bg-secondary text-white" style="">
+    Footer section
   </div>
   <div class="card-body bg-secondary">
+    
     <blockquote class="blockquote mb-0">
       <p class="text-white">A well-known quote, contained in a blockquote element.</p>
       <footer class="blockquote-footer text-white">Someone famous in <cite title="Source Title">Source Title</cite></footer>
